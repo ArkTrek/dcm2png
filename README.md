@@ -17,12 +17,6 @@ This repository contains a Python script that converts DICOM (.dcm) files into P
 2. **Pixel Data**: The actual image data, which can represent a single 2D image or a series of slices for 3D data.
 3. **Tags**: Labels used for metadata fields. Each tag is identified by a unique hexadecimal pair (e.g., `0010,0010` for the patient's name).
 
-### Why Convert DICOM to PNG?
-- **Visualization**: PNG is a widely used image format supported by almost all software applications, making it easier to visualize medical images outside specialized medical software.
-- **Sharing**: PNG files are lighter in size and more convenient to share with patients or non-medical professionals.
-- **Publications/Reports**: When medical images are needed for reports or publications, converting DICOM to PNG allows easy embedding into documents.
-
-
 ## Requirements
 
 - Python 3.x
@@ -66,10 +60,6 @@ If your folder structure looks like this:
 
 After running the script, all PNG files will be saved in the output folder you specify.
 
-## Script Details
-
-- The script normalizes pixel intensity values from the DICOM files to a range of 0-255 for proper conversion to PNG.
-- Each `.dcm` file will be saved as a `.png` file with the same name in the specified output folder.
 
 ## License
 
