@@ -25,17 +25,24 @@ def split_image(image_path, output_folder, grid_size=(9, 9)):
             # Crop the image
             cropped_img = img.crop((left, upper, right, lower))
 
-            # Save each piece
-            cropped_img.save(os.path.join(output_folder, f"piece_{row}_{col}.png"))
+            # Save each piece with a unique name
+            cropped_img.save(os.path.join(output_folder, f"{os.path.basename(image_path).split('.')[0]}_piece_{row}_{col}.png"))
 
-    print(f"Image successfully split into {grid_size[0]}x{grid_size[1]} pieces!")
+    print(f"Image '{image_path}' successfully split into {grid_size[0]}x{grid_size[1]} pieces!")
+
+def split_images_in_folder(input_folder, output_folder, grid_size=(9, 9)):
+    # Get all image files in the input folder
+    for filename in os.listdir(input_folder):
+        if filename.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp', '.gif')):  # Add more formats if needed
+            image_path = os.path.join(input_folder, filename)
+            split_image(image_path, output_folder, grid_size)
 
 if __name__ == "__main__":
-    # Path to the input image
-    image_path = "Epilepsy//dataset//04-0001-000001.png"  # Replace with the path to your image
+    # Path to the input folder containing images
+    input_folder = "Epilepsy/dataset"  # Replace with the path to your input folder
     
-    # Path to the output folder
-    output_folder = "Epilepsy//dataset"  # Replace with your desired output folder
+    # Path to the output folder for split images
+    output_folder = "Epilepsy/dataset/split_images"  # Replace with your desired output folder
 
-    # Split the image into 9x9 pieces
-    split_image(image_path, output_folder)
+    # Split images in the specified folder into 9x9 pieces
+    split_images_in_folder(input_folder, output_folder)
