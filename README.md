@@ -68,7 +68,7 @@ Additionally, this script can split the converted PNG files into 9x9 grid pieces
     python imageSlicer.py
 
     ```
-This will split the PNG images into 9x9 pieces and save them to the pieces folder.
+    This will split the PNG images into 9x9 pieces and save them to the pieces folder.
 
 ## Example
 
