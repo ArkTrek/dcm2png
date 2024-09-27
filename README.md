@@ -2,6 +2,28 @@
 
 This repository contains a Python script that converts DICOM (.dcm) files into PNG format. The script traverses through a folder and its subfolders, identifies all `.dcm` files, and converts them to `.png` files. All the PNG files are saved in a single output folder.
 
+## What are DICOM Files?
+
+**DICOM** (Digital Imaging and Communications in Medicine) is a standard for handling, storing, and transmitting medical images and related information. It is used globally in medical imaging for the interoperability of systems and devices, enabling the integration of imaging devices (such as MRI, CT, X-ray scanners) with hospitals and clinics' IT systems.
+
+### Key Features of DICOM:
+- **Medical Image Format**: Used for medical imaging data such as MRI, CT scans, X-rays, ultrasound, and more.
+- **Embedded Metadata**: Contains extensive metadata, such as patient information, image acquisition parameters, and hospital or clinic information.
+- **Cross-Modality Support**: Supports multiple imaging modalities like radiography, mammography, ultrasound, CT, MRI, and nuclear medicine.
+- **Interoperability**: Ensures compatibility across different medical systems and imaging devices, enabling universal interpretation and sharing of images.
+
+### Components of a DICOM File:
+1. **Header**: Contains metadata such as patient name, ID, modality (e.g., MRI, CT), and dimensions.
+2. **Pixel Data**: The actual image data, which can represent a single 2D image or a series of slices for 3D data.
+3. **Tags**: Labels used for metadata fields. Each tag is identified by a unique hexadecimal pair (e.g., `0010,0010` for the patient's name).
+
+### Why Convert DICOM to PNG?
+- **Visualization**: PNG is a widely used image format supported by almost all software applications, making it easier to visualize medical images outside specialized medical software.
+- **Sharing**: PNG files are lighter in size and more convenient to share with patients or non-medical professionals.
+- **Publications/Reports**: When medical images are needed for reports or publications, converting DICOM to PNG allows easy embedding into documents.
+
+
+
 ## Features
 
 - Converts DICOM files (.dcm) to PNG (.png).
