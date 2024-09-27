@@ -47,4 +47,29 @@ This repository contains a Python script that converts DICOM (.dcm) files into P
 ## Example
 
 If your folder structure looks like this:
+    /path/to/dicom/folder ├── file1.dcm ├── file2.dcm └── subfolder └── file3.dcm
+
+
+After running the script, all PNG files will be saved in the output folder you specify.
+
+## Script Details
+
+- The script normalizes pixel intensity values from the DICOM files to a range of 0-255 for proper conversion to PNG.
+- Each `.dcm` file will be saved as a `.png` file with the same name in the specified output folder.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Contributing
+
+Feel free to submit issues or pull requests if you'd like to contribute to improving this script!
+
+## Contact
+
+If you have any questions, feel free to reach out via GitHub issues.
+
+---
+
+Happy converting! 😊
 
