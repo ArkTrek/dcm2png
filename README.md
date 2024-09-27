@@ -64,10 +64,10 @@ Additionally, this script can split the converted PNG files into 9x9 grid pieces
 
 3. The output PNG pieces will be saved in a separate folder within the `output_folder` under the `pieces` subdirectory.
 
-```python
-    python split_images.py
+    ```python
+    python imageSlicer.py
 
-```
+    ```
 This will split the PNG images into 9x9 pieces and save them to the pieces folder.
 
 ## Example
